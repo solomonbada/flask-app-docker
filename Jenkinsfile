@@ -14,7 +14,7 @@ pipeline {
                                                 fi
                         stage('--run--'){
                                 steps{
-                                        sh "sudo docker run -d p 5000:5000 --name flaskapp flaskapp"
+                                        sh ("sudo docker run -d p 5000:5000 --name flaskapp flaskapp")
                                         fi'''
                                 }
                         }
