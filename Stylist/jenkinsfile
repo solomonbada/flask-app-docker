@@ -1,7 +1,7 @@
 pipeline{
         agent any
         stages{
-                        stages('---Build_Image---'){
+                        stage('---Build_Image---'){
                                 steps{
                                         sh "sudo docker build -t flaskapp ."
                                 }
