@@ -8,8 +8,8 @@ pipeline {
                         }
                         stage('--clean--'){
                                 steps{
-                                       sh label: '', script: '''if [ "$(sudo docker ps -a -q -f name=flaskapp)" ]; then
-                                                        sudo docker rm -f flaskapp
+                                       sh label: '', script: '''if [ "$(sudo docker ps -aq -f name=flaskapp)" ]; then
+                                                                        sudo docker rm -f flaskapp
                                               
                         stage('--run--'){
                                 steps{
