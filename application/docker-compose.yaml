@@ -23,4 +23,4 @@ mysql:
       source: jenkins-home
       target: "/var/jenkins_home"
     - type: bind
-      source: "var/run/dcock
+      source: "var/run/docker
