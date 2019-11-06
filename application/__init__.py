@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY']='f9bf78ba18ce6d46a0cd2b0b86df9da'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost'
 
-db = SQLAlchmey(app)
+db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
 login_manager = LoginManager(app)
