@@ -1,14 +1,16 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from flask_mysqldb import MySQL
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 app = Flask(__name__)
 
-app.config['SECRET_KEY']='f9bf78ba18ce6d46a0cd2b0b86df9da'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'root'
+app.config['MYSQ_DB'] = 'MyDB'
 
 
-db = SQLAlchemy(app)
+mysql =  MySQL(app)
 bcrypt = Bcrypt(app)
 
 login_manager = LoginManager(app)
