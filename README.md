@@ -1,5 +1,5 @@
 Introduction
-The web app was maded using Flask which is a micro web framework using python language. The environment used to run the app is Ubuntu 16.04 and Google cloud platform 
+The web-app was maded using Flask which is a micro web framework using python language. The environment used to run the app is Ubuntu 16.04 and Google cloud platform 
 
 Pre-requistes
 sudo apt-get isntall python3
