@@ -1,8 +1,10 @@
 
   
 FROM python:2.7
+RUN apt update
+RUN apt install -y netcat
 WORKDIR /app
-COPY requirements .
-RUN pip install -r requirements
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 COPY . .
-ENTRYPOINT ["/usr/local/bin", "-b", "0.0.0.0:8000", "application.__init__:app"]
+ENTRYPOINT ["./init.sh"]
